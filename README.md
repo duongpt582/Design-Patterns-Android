@@ -10,3 +10,6 @@ Nếu bạn thực sự nghiêm túc muốn đi theo con đường trở thành 
 - Đồng thời tăng tốc độ phát triển và testing cho các nhà phát triển
 - Đương nhiên code sẽ trở nên dễ đọc và dễ hiểu kèm theo đó là dễ bảo trì nâng cấp về sau.
 - Tiết kiệm thời gian làm việc với code của các dev khác.
+
+## Hiện tại ở project có những gì?
+- Singleton: SQLite database, Room database, SharedPreference.
