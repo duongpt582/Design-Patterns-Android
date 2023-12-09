@@ -31,8 +31,11 @@ class DatabaseHelperGenericType<T> private constructor(context: Context) :
         private var instance: DatabaseHelperGenericType<*>? = null
 
         fun <T> getInstance(context: Context): DatabaseHelperGenericType<T> {
+            // First check outside the synchronized block
             if (instance == null) {
+                // Only enter synchronized block if instance is still null
                 synchronized(this) {
+                    // Double-check inside synchronized block
                     if (instance == null) {
                         instance = DatabaseHelperGenericType<T>(context.applicationContext)
                     }
