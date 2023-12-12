@@ -1,17 +1,17 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("com.google.devtools.ksp") version "1.8.21-1.0.11"
+    id("com.google.devtools.ksp")
 }
 
 android {
     namespace = "com.duongpt207595.designpatterns"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.duongpt207595.designpatterns"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

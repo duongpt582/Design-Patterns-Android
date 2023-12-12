@@ -31,6 +31,7 @@ class DatabaseHelperGenericType<T> private constructor(context: Context) :
         private var instance: DatabaseHelperGenericType<*>? = null
 
         fun <T> getInstance(context: Context): DatabaseHelperGenericType<T> {
+
             if (instance == null) {
                 synchronized(this) {
                     if (instance == null) {

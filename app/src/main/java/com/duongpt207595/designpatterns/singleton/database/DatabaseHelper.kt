@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper
 class DatabaseHelper private constructor(context: Context) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
+    //companion object là một cách để tạo một đối tượng đặc biệt nằm trong phạm vi của một lớp
     companion object {
         private const val DATABASE_NAME = "YourDatabaseName"
         private const val DATABASE_VERSION = 1

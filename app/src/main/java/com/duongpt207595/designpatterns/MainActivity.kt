@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.util.Log
 import com.duongpt207595.designpatterns.singleton.database.DatabaseHelperGenericType
 import com.duongpt207595.designpatterns.singleton.database.Person
+import com.duongpt207595.designpatterns.singleton.room.AppContainer
+import com.duongpt207595.designpatterns.singleton.room.AppDataContainer
+import com.duongpt207595.designpatterns.singleton.sharedpreference.SharedPreferencesManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
@@ -30,6 +33,23 @@ class MainActivity : AppCompatActivity() {
 
         Log.d(TAG, "onCreate: multi thread.....")
         multiThread()
+
+        var sharedPreferences = SharedPreferencesManager.getInstance(this)
+        Log.d(TAG, "onCreate: $sharedPreferences")
+
+        var sharedPreferences2 = SharedPreferencesManager.getInstance(this)
+        Log.d(TAG, "onCreate: $sharedPreferences2")
+
+        var sharedPreferences3 = SharedPreferencesManager.getInstance(this)
+        Log.d(TAG, "onCreate: $sharedPreferences3")
+
+        val appDataContainer = AppDataContainer(this)
+        val repo = appDataContainer.itemsRepository
+        Log.d(TAG, "onCreate: repo: $repo")
+
+        val appDataContainer2 = AppDataContainer(this)
+        val repo2 = appDataContainer.itemsRepository
+        Log.d(TAG, "onCreate: repo: $repo2")
 
     }
 
